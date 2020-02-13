@@ -1,0 +1,180 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.logo {
+    font-size: larger;
+    margin-top: 15px;
+}
+
+header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+}
+.logo-container,.nav-links ,.cart{
+    display: flex;
+}
+.nav-link {
+    text-decoration: none;
+    color: gray;
+    font-size: 18px;
+    display: flex;
+    }
+.nav-links {
+    list-style: none;
+    justify-content: space-between;
+}
+
+.logo-container {
+    flex: 1;
+}
+nav {
+    flex: 2;
+
+}
+
+.cart{
+    flex: 1;
+    width: 40px;
+    height: 40px;
+    justify-content: flex-end;
+}
+.presentation {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+
+}
+.cover {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 55vh;   
+}
+.cover img {
+    
+    height: 100%;
+    filter: drop-shadow(0px 5px 3px black);
+    animation: drop 2s ease;
+
+}
+
+.introduction {
+   
+   flex: 1;
+    
+}
+.intro-text h1 {
+    font-size: 44px;
+    font-weight: 500;
+    background: linear-gradient(to right, grey, lightgrey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.intro-text p{
+    margin: 5px;
+    font-size: 22px;
+    color: #85adad;
+}
+.btn{
+    padding: 50px 0px 0px 0px;
+}
+.btn-select {
+    border: 2px solid green;
+    background: transparent;
+    color: green;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-add{
+    background-color: green;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-left: 30px;
+}
+.background {
+    position: absolute;
+    top: 0px;
+    opacity: 0.2;
+    z-index: -1;
+}
+.fulldot{
+    width: 50px;
+    height: 50px;
+    
+}
+.arrow {
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 10%;
+}
+
+@keyframes drop {
+    0%{
+        opacity: 0;
+        transform: translateY(-80px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+@media screen and (max-width:1024px){
+     .presentation {
+         flex-direction: column;
+     }
+     .introduction {
+         margin-top: 5v;
+         text-align: center;
+     }
+     .intro-text h1{
+         font-size: 30px;
+     }
+     .intro-text p{
+         font-size: 18px;
+     }
+     .btn{
+         padding: 10px 0px 0px 0px;
+     }
+     .arrow{
+         bottom: 5%;
+         right: 50%;
+         width: 50%;
+         transform: translate(50%,5%);
+     }
+     .cover img {
+         height: 80%;
+     }
+     .nav-links {
+        flex-flow: wrap;
+    }
+    main {
+       flex-direction:column ;
+    }
+    .background{
+        background-size: 100%;
+    }
+
+    }
